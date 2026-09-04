@@ -3,60 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DevDynamo713 - Private AI Tools for Small Business</title>
+<title>DevDynamo713 - Private AI and Business Workflow Tools</title>
 <style>
   :root { --bg:#0a0a0b; --panel:#101318; --line:#252a33; --text:#f4f4f5; --muted:#9ca3af; --blue:#2563eb; }
   * { box-sizing:border-box; margin:0; padding:0; }
   body { background:var(--bg); color:var(--text); font-family:system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.6; }
-  .wrap { max-width:900px; margin:0 auto; padding:0 20px; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
   header { display:flex; justify-content:space-between; align-items:center; padding:28px 0; }
-  .brand { font-weight:700; }
   a { color:var(--text); text-decoration:none; }
   .btn { display:inline-block; padding:12px 22px; border-radius:10px; margin:6px 6px 0 0; }
   .btn-blue { background:var(--blue); color:#fff; }
   .btn-line { border:1px solid var(--line); }
-  .hero { text-align:center; padding:70px 0 40px; }
-  .hero h1 { font-size:44px; line-height:1.15; margin-bottom:18px; }
-  .hero p { color:var(--muted); max-width:640px; margin:0 auto 26px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; padding:30px 0; }
-  .card { border:1px solid var(--line); background:var(--panel); border-radius:12px; padding:20px; }
-  .card h3 { margin-bottom:8px; }
-  .card p { color:var(--muted); font-size:14px; }
-  h2 { text-align:center; margin-top:30px; }
-  .proof { border:1px solid var(--line); background:var(--panel); border-radius:12px; padding:26px; text-align:center; }
-  .proof p { color:var(--muted); max-width:640px; margin:10px auto 16px; }
+  .hero { text-align:center; padding:60px 0 30px; }
+  .hero h1 { font-size:40px; line-height:1.15; margin-bottom:16px; }
+  .hero p { color:var(--muted); max-width:660px; margin:0 auto 22px; }
+  h2 { text-align:center; margin:40px 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:14px; }
+  .card { border:1px solid var(--line); background:var(--panel); border-radius:12px; padding:18px; }
+  .card h3 { font-size:15px; display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px; }
+  .card p { color:var(--muted); font-size:13px; }
+  .badge { font-size:10px; padding:2px 8px; border-radius:999px; border:1px solid; white-space:nowrap; }
+  .live { color:#4ade80; border-color:#14532d; }
+  .build { color:#facc15; border-color:#713f12; }
+  .plan { color:#9ca3af; border-color:#374151; }
+  .case { border:1px solid var(--line); background:var(--panel); border-radius:12px; padding:26px; }
+  .case h3 { margin-bottom:10px; }
+  .case ul { color:var(--muted); font-size:14px; padding-left:20px; margin:10px 0 16px; }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:14px; text-align:center; }
+  .steps div { border:1px solid var(--line); border-radius:12px; padding:14px; }
+  .steps p { color:var(--muted); font-size:12px; }
+  .quality { text-align:center; color:var(--muted); font-size:14px; border:1px solid var(--line); border-radius:12px; padding:18px; }
   footer { text-align:center; color:var(--muted); font-size:14px; padding:40px 0; }
 </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <span class="brand">DevDynamo713</span>
+      <span style="font-weight:700">DevDynamo713</span>
       <a class="btn btn-line" href="mailto:713hussam@gmail.com">Contact</a>
     </header>
 
     <section class="hero">
-      <h1>Private AI tools that run in your building.</h1>
-      <p>I build custom web tools for small businesses - bookings, inventory, scheduling, task operations - with AI that runs on your own hardware. No per-user fees. Your data never leaves your building.</p>
+      <h1>Private AI &amp; business workflow tools for small businesses.</h1>
+      <p>Bookings, inventory, invoices, task operations - custom tools that run on your own hardware. No per-user fees. Your data never leaves your building.</p>
       <a class="btn btn-blue" href="mailto:713hussam@gmail.com">Request a quote</a>
-      <a class="btn btn-line" href="https://task-tracker-rouge-ten-53.vercel.app">See the live demo</a>
+      <a class="btn btn-line" href="https://task-tracker-rouge-ten-53.vercel.app">Try the live demo</a>
     </section>
 
-    <h2>What you get</h2>
-    <div class="grid">
-      <div class="card"><h3>A tool for your workflow</h3><p>Not a generic SaaS. Built around how your business actually works.</p></div>
-      <div class="card"><h3>Private by design</h3><p>Deployed on your hardware. Accounts, per-user data, no third-party AI APIs.</p></div>
-      <div class="card"><h3>Verified quality</h3><p>Automated tests and checks on every change. Deployed live, maintained properly.</p></div>
-    </div>
-
-    <h2>Proof of work</h2>
-    <div class="proof">
-      <h3>TaskFlow - AI-assisted task management</h3>
-      <p>A live product: registered accounts, per-user task lists, AI task breakdown on private hardware. Tested, CI-verified, deployed.</p>
+    <h2>Featured case study</h2>
+    <div class="case">
+      <h3>TaskFlow - AI-assisted task operations <span class="badge live">LIVE</span></h3>
+      <ul>
+        <li>Problem: small teams track work in WhatsApp and paper; cloud AI tools send data to third parties.</li>
+        <li>Built: accounts, per-user task lists, AI task breakdown on private hardware.</li>
+        <li>Proof: automated unit + browser tests on every change, CI-verified, security-probed, deployed live with real auth.</li>
+      </ul>
       <a class="btn btn-line" href="https://task-tracker-rouge-ten-53.vercel.app/register">Try it live</a>
     </div>
 
-    <footer>© 2026 DevDynamo713 - Full-Stack & AI Engineer</footer>
+    <h2>Business tools portfolio</h2>
+    <div class="grid">
+      <div class="card"><h3>TaskFlow <span class="badge live">LIVE</span></h3><p>Private task ops with AI breakdown. Accounts, per-user data, tested, deployed.</p></div>
+      <div class="card"><h3>BookingFlow <span class="badge build">IN BUILD</span></h3><p>Appointments for barbers, clinics, garages. No double-booking, owner dashboard.</p></div>
+      <div class="card"><h3>StockPilot <span class="badge plan">PLANNED</span></h3><p>Inventory + low-stock alerts for small shops. CSV in, reports out.</p></div>
+      <div class="card"><h3>InvoiceDesk <span class="badge plan">PLANNED</span></h3><p>Quotes and invoices for tradesmen. Line items, tax math, printable doc.</p></div>
+      <div class="card"><h3>CrewBoard <span class="badge plan">PLANNED</span></h3><p>Field job scheduling. Assign workers, track status, daily board.</p></div>
+      <div class="card"><h3>ClientPortal <span class="badge plan">PLANNED</span></h3><p>Private customer portal. Each client sees only their own records.</p></div>
+      <div class="card"><h3>ReviewRadar <span class="badge plan">PLANNED</span></h3><p>Customer feedback dashboard. Top complaints, local AI summary.</p></div>
+      <div class="card"><h3>LeadTrack <span class="badge plan">PLANNED</span></h3><p>Simple CRM pipeline so leads never die in WhatsApp.</p></div>
+      <div class="card"><h3>ServiceCheck <span class="badge plan">PLANNED</span></h3><p>Maintenance checklists with completion history and audit trail.</p></div>
+      <div class="card"><h3>ReportForge <span class="badge plan">PLANNED</span></h3><p>CSV to business dashboard. Totals, filters, plain-language summary.</p></div>
+    </div>
+
+    <h2>How I build</h2>
+    <div class="steps">
+      <div><h3>Discover</h3><p>Your workflow, your time sinks.</p></div>
+      <div><h3>Prototype</h3><p>Fixed scope, fixed price.</p></div>
+      <div><h3>Test</h3><p>Automated checks on every change.</p></div>
+      <div><h3>Deploy</h3><p>Live on your hardware or a $5 VPS.</p></div>
+      <div><h3>Maintain</h3><p>Support window, then retainer.</p></div>
+    </div>
+
+    <h2>Quality standard</h2>
+    <div class="quality">Real auth · Real database · Automated tests · CI on every change · Live deployment · Client-ready UX · No fake AI claims</div>
+
+    <footer>© 2026 DevDynamo713 - Full-Stack &amp; AI Engineer</footer>
   </div>
 </body>
 </html>
