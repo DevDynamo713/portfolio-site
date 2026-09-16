@@ -103,5 +103,38 @@
 
     <footer>&copy; 2026 DevDynamo713 - Full-Stack &amp; AI Engineer</footer>
   </div>
-</body>
+<section style="max-width:720px;margin:48px auto;padding:0 16px">
+  <h2 style="text-align:center;font-size:28px;margin-bottom:24px">Hire the fleet builder</h2>
+  <form id="contact-form" style="border:1px solid #27272a;border-radius:12px;padding:16px;background:#0c0c0e;display:flex;flex-direction:column;gap:12px">
+    <input id="cf-name" placeholder="name" style="background:#111113;border:1px solid #3f3f46;border-radius:8px;color:#fafafa;padding:10px;font-family:inherit;font-size:14px">
+    <input id="cf-email" type="email" placeholder="email" style="background:#111113;border:1px solid #3f3f46;border-radius:8px;color:#fafafa;padding:10px;font-family:inherit;font-size:14px">
+    <input id="cf-company" placeholder="company" style="display:none" tabindex="-1" autocomplete="off">
+    <textarea id="cf-message" placeholder="project details" rows="4" style="background:#111113;border:1px solid #3f3f46;border-radius:8px;color:#fafafa;padding:10px;font-family:inherit;font-size:14px"></textarea>
+    <button id="cf-send" type="submit" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:10px;font-family:inherit;font-size:14px;cursor:pointer">send</button>
+    <p id="cf-status" style="color:#a1a1aa;font-size:14px;margin:0"></p>
+  </form>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = document.getElementById('cf-status');
+      var btn = document.getElementById('cf-send');
+      btn.disabled = true;
+      status.textContent = 'sending...';
+      fetch('https://dd713-contact.devdynamo713.workers.dev/lead', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          name: document.getElementById('cf-name').value,
+          email: document.getElementById('cf-email').value,
+          message: document.getElementById('cf-message').value,
+          company: document.getElementById('cf-company').value
+        })
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        if (j.ok) { status.textContent = 'thanks - reply within 24h'; document.getElementById('contact-form').reset(); }
+        else { status.textContent = 'error: ' + (j.error || 'unknown'); }
+        btn.disabled = false;
+      }).catch(function () { status.textContent = 'network error - try again'; btn.disabled = false; });
+    });
+  </script>
+</section></body>
 </html>
