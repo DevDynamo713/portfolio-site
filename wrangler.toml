@@ -1,0 +1,7 @@
+name = "dd713-contact"
+main = "worker/worker.ts"
+compatibility_date = "2026-09-01"
+
+[[kv_namespaces]]
+binding = "CONTACTS"
+id = "856c20f2a71f453cab9f8abc5ef40f57"
